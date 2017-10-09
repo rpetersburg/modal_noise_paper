@@ -1,0 +1,110 @@
+72c72,75
+< Due to interference between these propagating modes, multi-mode step-index optical fibers produce a high-contrast speckle pattern, known as \textit{modal noise}, when propagating light from a highly coherent light source (see figure \ref{fig:fiber_example}). Modal noise is an inherent property of all fibers regardless of the cross-sectional core shape \citep{Sablowski2015} [OTHER CITATIONS?] as long as the core is large enough to propagate multiple electromagnetic modes at a given wavelength. Due to its high contrast, modal noise can severely decrease the signal-to-noise ratio of an RV spectrograph \citep{Epworth1978, Baudrand2001, Lemke2011}. Additionally, if the speckle pattern drifts between exposures, especially with some period of motion, modal noise can cause errant RV signatures in the data that is distinct from errors due to poor scrambling \citep{Mahadevan2014}.
+---
+> When coherent light is propagated through a multi-mode fiber, a high contrast speckle pattern known as modal noise is produced at the output for both the near-field (fiber face) and far-field (a few what's his nuts name lengths), figure \ref{fig:fiber_example}. Modal noise is an inherent property of all multi-mode fibers regardless of the cross-sectional core shape \citep{Sablowski2015} [OTHER CITATIONS?] and arises from light coupling from mode-to-mode as it propagates through fiber, causing slight variances in the path length travelled and producing the observered interference pattern. For RV spectrographs this causes two problems: 1) it limits the maximum signal-to-noise ratio and 2) systematic variations in the speckle pattern will mask themselves as minute shifts on the focal plane causing errant RV signatures.
+> 
+> \subsection{Limits on SNR}
+> Due to its high contrast, modal noise can severely decrease the signal-to-noise ratio of an RV spectrograph \citep{Epworth1978, Baudrand2001, Lemke2011}. Additionally, if the speckle pattern drifts between exposures, especially with some period of motion, modal noise can cause errant RV signatures in the data that is distinct from errors due to poor scrambling \citep{Mahadevan2014}.
+82a86
+> \subsection{Dynamic variations}
+138,142c142
+< As summarized in table \ref{table:previous_studies}, modal noise reduction techniques have been discussed by many experiments concerned with RV spectroscopy. \cite{Mahadevan2014} and \cite{Halverson2014} have shown the effectiveness of illumination variation using an integrating sphere, diffuser, and rotating mirror. These studies presented the gradual improvements in modal noise reduction due to the addition of further illumination variation. They also showed how these techniques would reliably reduce modal noise RV error to an upper limit of 1.3 m/s per line, leading to a total RV precision of 20-30 cm/s for a $R = 50,000$ instrument. However, the integrating sphere, an integral part of these methods, has a throughput efficiency of approximately $10^{-6}$. Therefore, this result is promising for extremely bright calibration sources, but may not be useful for ultra-precise optical laser frequency combs which contain about \SI{10}{\nano\watt} for each comb line [CITATION NEEDED].
+< 
+< Given the throughput efficiency of EXPRES, calibration exposures would need to last over an hour to reach appropriate signal levels when using an integrating sphere for modal noise mitigation. The current mode of observation for EXPRES is bracketed observations, where the wavelength calibration exposure occurs as the telescope is repositioning to a new star. Therefore, the calibration exposure times need to be minimized to maximize stellar data collection, and EXPRES could not use an integrating sphere solution.
+< 
+< Otherwise, the studies in table \ref{table:previous_studies} use some form of fiber agitation, whether by hand, loudspeaker, or mechanical device, to reduce modal noise. The variation in frequency and amplitude for these agitation methods is unfortunately quite wide and connections are difficult to make. However, there have been slight trends in the results and the discussed assumptions so far are as follows:
+---
+> As summarized in table \ref{table:previous_studies}, modal noise reduction techniques have been discussed by many experiments concerned with RV spectroscopy. The majority deal with some form of agitation that physically changes the position of the fiber (mechanical agitation) while \cite{Mahadevan2014} and \cite{Halverson2014} explored the effectiveness of varying the illumination of the fiber face. The variation in frequency and amplitude for the mechanical agitation methods is unfortunately quite wide and connections are difficult to make. However, there have been slight trends in the results and the discussed assumptions so far are as follows:
+151a152,153
+> Varying the input illumination of a fiber using an integrating sphere, diffuser, and rotating mirror showed gradual improvements in modal noise reduction due to the addition of further illumination variation. However, the integrating sphere, an integral part of these methods, has a throughput efficiency of approximately $10^{-6}$ and is not feasible to be introduced in the science light optical path. To allow flexible observing programs, i\.e\. science observations bracketed by precision wavelength calibraiton sources, the modal noise mitigation technique needs to be efficient. 
+> 
+156,157c158
+< 
+< With this relationship in mind, we maintain fiber cross-sectional area, rather than diameter or otherwise, when conducting tests across fiber geometries. The fibers that we select for testing are listed in table \ref{table:fibers}. Notice that the \SI{200}{\micro\meter} circular, \SI{200}{\micro\meter} octagonal, and \SI{100x300}{\micro\meter} rectangular fiber all have approximately the same cross-sectional area, meaning they each can propagate the same maximum number of modes.
+---
+> The number of modes a fiber supports is largely determined by its cross-sectional area. For tesing and characterizting agitation methods across multiple firber geometries, we chose a fibers with similar cross-sectional areas. Table \ref{table:fibers} lists the fibers used in our experiment. Notice that the \SI{200}{\micro\meter} circular, \SI{200}{\micro\meter} octagonal, and \SI{100x300}{\micro\meter} rectangular fiber all have approximately the same cross-sectional area, meaning they can each support a similar number of modes.
+178c179
+< We agitate the fibers using two different fiber agitators shown in figure \ref{fig:agitators}. The first is a ``linear agitator'' that rotates the fiber parallel to the light path, thereby effectively lifting it up and down in one-dimension. This agitator has variable amplitude, through positioning holes on the rotating arm at increments of \SI{40}{\milli\meter} allowing for 80-\SI{320}{\milli\meter} agitation amplitudes at \SI{80}{\milli\meter} intervals. The frequency of the agitators is set by a voltage-controlled DC motor with a range of 0.03 to \SI{1.0}{\hertz}. We also employ a ``circular agitator'' that rotates the fibers perpendicular to the light path. This device is set at \SI{80}{\milli\meter} agitation amplitude and has a separate voltage-controlled DC motor with frequency range between 0.1 and \SI{1.5}{\hertz}. We can also agitate fibers with the linear and circular agitator simultaneously, hereafter called it ``coupled agitation.''
+---
+> Two different methods of mechanical agitation are used: the first produces a linear type motion in which the fiber is moved up and down, the other is a circular type motion in which the fiber cross section is rotated perpendicular to direction of propagation. The linear agitation has variable amplitude allowing for 80-\SI{320}{\milli\meter} agitation amplitudes at \SI{80}{\milli\meter} intervals and a variable frequency in the range of 0.03 to \SI{1.0}{\hertz}. For the circular agitator, the fiber is rotated in circular path with a set radius of \SI{80}{\milli\meter} \textbf{is this correct?} at a variable frequency of  0.1 to \SI{1.5}{\hertz}. Routing a fiber through both agitators produces what we call ``coupled agitation''.  Both agitators are shown in figure \ref{fig:agitators}, frequencies are independently set by adjusting the appropriate DC-motor drive volatge. The amplitude of the linear agitator is set by the position of the lifting arm \textbf{label lift arm} and a small counterweight is present to keep a minimal amount of tension in the fiber and prevent it from \textbf{flying about?!?}.
+187c188,190
+< All image data was collected with the Fiber Characterization Station (FCS, figure \ref{fig:fcs}), a multipurpose device that is able to simultaneously image the input face, output face (or near field), and output pupil (or far field) of any optical fiber. Specifications for the FCS cameras are listed in table \ref{table:cameras}.
+---
+> All image data was collected with the Fiber Characterization Station (FCS, figure \ref{fig:fcs}), a multipurpose device that is able to simultaneously image the input face, output face (or near field), and output pupil (or far field) of the fiber under test. Specifications for the FCS cameras are listed in table \ref{table:cameras}.
+> 
+> \textbf{Expnad on this}
+215c218
+< For each data set, we take a sequence of ten of these images. There is a slight gap of a few seconds between each exposure as the camera downloads the image. We take multiple images for two reasons
+---
+> For each data set, we take a sequence of ten exposures in order to:
+217,218c220,221
+< \item to reduce statistical errors in our SNR calculations potentially caused by camera noise or small problems with our agitators
+< \item to observe the effects of agitation at longer exposures time by co-adding multiple single-rotation images together. 
+---
+> \item reduce statistical errors in our SNR calculations potentially caused by camera noise or small problems with our agitators
+> \item observe the effects of agitation at longer exposures time by co-adding multiple single-rotation images together. 
+221a225,232
+> Each data set is comprised of a 10 exposures each of the following cases:
+> \begin{enumerate}
+> \item the fiber being actively agitated
+> \item the fiber routed through the agitator but without agitation
+> \item the unagitated fiber illuminated with a broadband LED.
+> \end{enumerate}
+> Multiple images are taken to reduce statistical errors in our SNR calculations potentially caused by camera noise or small problems with our agitators and to observe the effects of agitation at longer exposures time by co-adding multiple single-rotation images together. The LED source acts as a best-case scenario and the unagitated as a worst case.
+> 
+231c242
+< Since the FCS allows for it, we do take far field images for each of our data set and analyze the respective results using the maximum intensity rather than the median intensity as the numerator in equation \ref{eq:snr}. The modal noise within the far field of an optical fiber is less critical to mitigate because its effects on RV precision are indirect and less understood. That being said, all results listed in the following section are further corroborated by the far field results. The extra data is omitted for clarity and concision as they would not change our conclusions.
+---
+> Far field images are taken for each data set and analyzed using the maximum intensity rather than the median intensity as the numerator in equation \ref{eq:snr}. The far field speckle pattern is of interest in precision RV spectroscopy as it is what illuminates the optics. However, mapping the far field speckle pattern to RV error would require numerical simulations with the optical design software and  is out of the scope of this paper. That being said, all results listed in the following section may be extended to the far field though we omit this data for conciseness.
+236,249d246
+< \subsection{Amplitude and Frequency of Agitation}
+< \label{subsec:amp_freq}
+< 
+< \begin{figure*}[t]
+< \centering
+< 	\includegraphics[width=\textwidth]{images/amp_freq_snr.pdf}
+< 	\caption{SNR comparison for varying amplitudes using the linear agitator (left) and varying frequencies using each of the linear (center) and circular (right) agitators. For the amplitude tests, the linear agitator was set at \SI{0.5}{\hertz}. For the linear agitator frequency test, the amplitude was set to \SI{240}{\milli\meter}. The circular agitator can only be set to an amplitude of \SI{80}{\milli\meter}. Integration times were set to match the period of 1 rotation (i.e. \SI{2}{\second} for \SI{0.5}{\hertz} agitation). The ``10 rotations'' data was calculated after co-adding 10 of these 1 rotation images. Results in the far field yielded similar correlations between amplitude, frequency, and SNR.}
+< \label{fig:amp_freq_snr}
+< \end{figure*}
+< 
+< We use the \SI{100x300}{\micro\meter} rectangular fiber and the two agitators separately to test the effects of agitation amplitude and frequency of rotation on the SNR. We can only test amplitude on the linear agitator and take an image set for each position on the rotating arms. We test frequency on each of the linear and circular agitators at approximately equally spaced frequencies across their entire frequency range.
+< 
+< Results from these tests are shown in figure \ref{fig:amp_freq_snr}. There is a strong position correlation between linear agitation amplitude using both the single-rotation and ten-rotation analyses. There also appears to be a slight increase in SNR for the linear agitator at higher frequencies after ten rotations, however there is no such increase for the single-rotations or any of the frequencies when using the circular agitator.
+< 
+259c256
+< We compare the two individual agitation methods and coupled agitation using all of the fibers list in table \ref{table:fibers}. The two agitators are set to the same amplitude (\SI{80}{\milli\meter}) and frequency (\SI{1.0}{\hertz}) meaning all images are taken with \SI{1}{\second} exposures.
+---
+> We compare the two individual agitation methods and coupled agitation using all of the fibers previously listed in table \ref{table:fibers}. The linear agitator was set to an amplitude of (\SI{80}{\milli\meter}) and the frequency of both agitators to (\SI{1.0}{\hertz}, all images are taken with \SI{1}{\second} exposures.
+274a272,287
+> \subsection{Amplitude and Frequency of Agitation}
+> \label{subsec:amp_freq}
+> 
+> \begin{figure*}[t]
+> \centering
+> 	\includegraphics[width=\textwidth]{images/amp_freq_snr.pdf}
+> 	\caption{SNR comparison for varying amplitudes using the linear agitator (left) and varying frequencies using each of the linear (center) and circular (right) agitators. For the amplitude tests, the linear agitator was set at \SI{0.5}{\hertz}. For the linear agitator frequency test, the amplitude was set to \SI{240}{\milli\meter}. The circular agitator can only be set to an amplitude of \SI{80}{\milli\meter}. Integration times were set to match the period of 1 rotation (i.e. \SI{2}{\second} for \SI{0.5}{\hertz} agitation). The ``10 rotations'' data was calculated after co-adding 10 of these 1 rotation images. Results in the far field yielded similar correlations between amplitude, frequency, and SNR.}
+> \label{fig:amp_freq_snr}
+> \end{figure*}
+> 
+> We use the \SI{100x300}{\micro\meter} rectangular fiber and the two agitators separately to test the effects of agitation amplitude and frequency of rotation on the SNR. We can only test amplitude on the linear agitator and take an image set for each position on the rotating arms. We test frequency on each of the linear and circular agitators at approximately equally spaced frequencies across their entire frequency range.
+> 
+> Results from these tests are shown in figure \ref{fig:amp_freq_snr}. There is a strong position correlation between linear agitation amplitude using both the single-rotation and ten-rotation analyses. There also appears to be a slight increase in SNR for the linear agitator at higher frequencies after ten rotations, however there is no such increase for the single-rotations or any of the frequencies when using the circular agitator.
+> 
+> 
+> 
+294c307
+< Most next-generation RV spectrographs use double-scramblers in their fiber architecture as briefly described in section \ref{sec:intro}. Thus, light is propagated through more than one fiber between the calibration sources, telescope, and spectrograph. To study the effects of such an architecture, we also test agitating individual fibers in a multi-fiber assembly where each fiber could have different core sizes and shape. We test three distinct cases outlined in table \ref{table:fiber_coupling} and compare them against agitating a single \SI{200}{\micro\meter} circular fiber. The fibers are agitated using the linear agitator at \SI{80}{\milli\meter} and \SI{1.0}{\hertz}.
+---
+> It is not uncommon for RV spectrographs to have multiple fiber links for carrying calibration and/or science light from the source (lamp or telescope respectively) to the spectrograph and ultimately detector. This results in having to couple light from one fiber to another and begs the question, is there a prefered fiber to agitate or must we agitate as many as possible? Agitating the first fiber in a multi-fiber system serves to vary the input illumination of subsequent fibers, similar to the integrating sphere proposed by mahadevan and halversion. To study the effects of such an architecture, we agitated individual fibers in a multi-fiber assembly where each fiber could have different core sizes and shape. We test three distinct cases outlined in table \ref{table:fiber_coupling} and compare them against agitating a single \SI{200}{\micro\meter} circular fiber. For this test fibers were agitated using the linear agitator at \SI{80}{\milli\meter} and \SI{1.0}{\hertz}.
+308c321
+< Our results indicate that large amplitude, relatively high frequency, chaotic coupled harmonic agitation for optical fibers that have large core cross-sectional area and low azimuthal symmetry yield the highest signal to noise. We therefore believe that the most important factor when agitating fibers is to place the fiber into as many physical configurations as possible over a single exposure. This motion needs to be continuous, to avoid build-up of a single fiber configuration speckle pattern, and can be done anywhere along the length of the fiber, allowing for large distance from a stabilized spectrograph.
+---
+> Our results can be summarized as follows, the highest SNR is attained when a fiber has been put through as many physical configurations as possible over the length of an exposure. This is best accomplished using a coupled agitation setup comprised of, in our case, a linear and circular motion with the highest amplitude possible on each. One could conceive a random or chaotic agitator as a possible implementation. These conclusions are highly reminiscent of the idea that hand-agitation is consistently better than any form of mechanical agitation. Human motions are much less deterministic than a motor resulting in a more chaotic motion. Our combined linear/circular agitator with slightly different oscillation frequency mimics this behavior since it will chaotically reach many fiber configurations over a single calibration exposure of about \SI{10}{\second}. Note that the motion needs to be continuous to avoid build-up of a static speckle pattern within the exposure.
+310c323
+< We made this conclusion initially from the data present in figure \ref{fig:amp_freq_snr} which shows a much stronger correlation between amplitude and SNR than between frequency and SNR. The data in figures \ref{fig:ag_snr} and \ref{fig:rect_snr_vs_time} provide further evidence that placing the fiber into more physical configurations further increases the SNR.
+---
+> Our results indicate that large amplitude, relatively high frequency, chaotic coupled harmonic agitation for optical fibers that have large core cross-sectional area and low azimuthal symmetry yield the highest signal to noise. We therefore believe that the most important factor when agitating fibers is to place the fiber into as many physical configurations as possible over a single exposure., and can be done anywhere along the length of the fiber, allowing for large distance from a stabilized spectrograph.
+312c325
+< These conclusions are highly reminiscent of the idea that hand-agitation is consistently better than any form of mechanical agitation. Human motions are much less deterministic than a motor, meaning that a person hand-agitating the fiber would naturally put it into more physical configurations. Our combined linear/circular agitator with slightly different oscillation frequency mimics this behavior since it will chaotically reach many fiber configurations over a single calibration exposure of about \SI{10}{\second}.
+---
+> We made this conclusion initially from the data present in figure \ref{fig:amp_freq_snr} which shows a much stronger correlation between amplitude and SNR than between frequency and SNR. The data in figures \ref{fig:ag_snr} and \ref{fig:rect_snr_vs_time} provide further evidence that placing the fiber into more physical configurations further increases the SNR.
