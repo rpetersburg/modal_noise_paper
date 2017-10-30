@@ -69,7 +69,7 @@ where $A$ is the cross-sectional area of the fiber and $C_{s}$ is a constant coe
 
 \begin{figure}
 \centering
-	\includegraphics[width=\columnwidth]{fiber_example.pdf}
+	\includegraphics[width=\columnwidth]{images/fiber_example.pdf}
 	\caption{Examples of unmitigated modal noise for a \SI{200}{\micro\meter} circular (left), \SI{200}{\micro\meter} octagonal (middle), and \SI{100x300}{\micro\meter} rectangular (right) optical fiber. All three fibers shown here have approximately the same cross-sectional area, meaning that they each are propagating about the same number of electromagnetic modes (see Eq. \ref{eq:mode_area}). Brightness in this image is scaled by (photon count)$^{0.6}$ for better presentation of the range of speckle brightness. The contrast of the speckles is therefore \textit{worse} than what is shown here.}
 \label{fig:fiber_example}
 \end{figure}
@@ -188,7 +188,7 @@ The number of modes a fiber supports is largely determined by its cross-sectiona
 
 \begin{figure}
 \centering
-	\includegraphics[width=\columnwidth]{agitators_labelled.pdf}
+	\includegraphics[width=\columnwidth]{images/agitators_labelled.pdf}
 	\caption{Laboratory images of the linear and circular agitator used in these modal noise tests attached to the \SI{100x300}{\micro\meter} rectangular fiber. The linear agitator rotates a variable-amplitude arm parallel to the fiber while the circular agitator rotates perpendicular to the fiber. A small counterweight keeps a minimal amount of tension in the fiber and prevents it from over-bending or bunching up. The inset in the bottom left contains a PASCO Scientific economy wave driver (``tweeter'') attached to an optical fiber. The tweeter is used to test high-frequency, low-amplitude agitation.}
 \label{fig:agitators}
 \end{figure}
@@ -201,7 +201,7 @@ All image data is collected with the Fiber Characterization Station (FCS, Figure
 
 \begin{figure}
 \centering
-	\includegraphics[width=\columnwidth]{fcs_schematic.pdf}
+	\includegraphics[width=\columnwidth]{images/fcs_schematic.pdf}
 	\caption{Schematic of the Fiber Characterization Station. Our choice of light source is fed into the station in the bottom left. This light is spatially filtered at focus, collimated, and finally injected into the test fiber as a \SI{10}{\micro\meter} spot. The injection face of the test fiber is imaged at 10x magnification by the input camera to allow for precision alignment. Light propagates through the test fiber and our choice of agitator mixes the modes. A cartoon of the three types of agitation (see Figure \ref{fig:agitators}) is presented above the schematic. Light is then ejected from the test fiber and split between the 10x magnified near field camera and the far field camera.}
 \label{fig:fcs}
 \end{figure}
@@ -235,7 +235,7 @@ Multiple images are taken 1) to reduce statistical errors in our S/N calculation
 
 \begin{figure}
 \centering
-	\includegraphics[width=\columnwidth]{fiber_improved.pdf}
+	\includegraphics[width=\columnwidth]{images/fiber_improved.pdf}
 	\caption{Ten-rotation, coupled agitation images using the same three fibers shown in Figure \ref{fig:fiber_example}.  The diffraction pattern is clearly seen, but otherwise, the presence of speckles in these images is significantly diminished. Brightness is directly scaled with photon count in these images.}
 \label{fig:fiber_improved}
 \end{figure}
@@ -261,14 +261,14 @@ Far field images are taken for each data set and analyzed using the maximum inte
 
 \begin{figure}
 \centering
-	\includegraphics[width=\columnwidth]{ag_snr.pdf}
+	\includegraphics[width=\columnwidth]{images/ag_snr.pdf}
 	\caption{S/N comparison for varying fiber geometries and large-amplitude agitation methods. The S/N is presented for both single-rotation and ten-rotation images.}
 \label{fig:ag_snr}
 \end{figure}
 
 \begin{figure}
 \centering
-	\includegraphics[width=\columnwidth]{rect_snr_vs_time.pdf}
+	\includegraphics[width=\columnwidth]{images/rect_snr_vs_time.pdf}
 	\caption{S/N dependence on number of rotations for the 100x\SI{300}{\micro\meter} rectangular fiber using various agitation methods. We find similar relationships for the all of the remaining fiber shapes and sizes.}
 \label{fig:rect_snr_vs_time}
 \end{figure}
@@ -286,7 +286,7 @@ Ten-rotation images of the three larger fibers using the coupled agitation metho
 
 \begin{figure*}[t]
 \centering
-	\includegraphics[width=\textwidth]{amp_freq_snr.pdf}
+	\includegraphics[width=\textwidth]{images/amp_freq_snr.pdf}
 	\caption{S/N comparison for varying amplitudes using the linear agitator (left) and varying frequencies using each of the linear (center) and circular (right) agitators.}
 \label{fig:amp_freq_snr}
 \end{figure*}
@@ -297,7 +297,7 @@ Results from these tests are shown in Figure \ref{fig:amp_freq_snr}. There is a 
 
 \begin{figure}
 \centering
-	\includegraphics[width=\columnwidth]{tweeter_snr.pdf}
+	\includegraphics[width=\columnwidth]{images/tweeter_snr.pdf}
 	\caption{S/N comparison when adding a tweeter to the coupled agitation method for the 100x\SI{300}{\micro\meter} rectangular fiber.}
 \label{fig:tweeter_snr}
 \end{figure}
@@ -331,7 +331,7 @@ To study the effects of such an architecture, we agitate individual fibers in a 
 
 \begin{figure}
 \centering
-	\includegraphics[width=\columnwidth]{coupled_fibers.pdf}
+	\includegraphics[width=\columnwidth]{images/coupled_fibers.pdf}
 	\caption{S/N for various arrangements of coupled fibers with varying core diameter and cross-sectional shape. All fibers can be assumed circular unless otherwise stated. The S/N for a single \SI{200}{\micro\meter} circular fiber is also presented for both the singe-rotation (dashed) and ten-rotation (solid) images.}
 \label{fig:coupled_fibers}
 \end{figure}
@@ -368,7 +368,7 @@ Coupled fiber test cases with light loss due to improperly matched \'etendue, su
 
 \begin{figure*}
 \centering
-	\includegraphics[width=\textwidth]{rv_error.pdf}
+	\includegraphics[width=\textwidth]{images/rv_error.pdf}
 	\caption{Centroid drift and resultant RV error for a fiber moved by a simulated telescope (first), slowly agitated fiber (second), coupled agitated fiber (third), and LED illumination (fourth). Each line represents a different exposure time each with their own calculated RV error. Note that the scale for the top three plots are different.}
 \label{fig:rv_error}
 \end{figure*}
@@ -419,14 +419,14 @@ The calculated \SI{60}{\centi\meter\per\second} error for coupled agitation is t
 
 \begin{figure}
 \centering
-	\includegraphics[width=\columnwidth]{fiber_rv_error.pdf}
+	\includegraphics[width=\columnwidth]{images/fiber_rv_error.pdf}
 	\caption{Comparison of the long-term agitation methods used in Section \ref{sec:rv_precision}--slow agitation (left), coupled agitation (middle), LED source (right)--as \SI{10}{\second} exposures. Brightness directly scales with photon count in these images.}
 \label{fig:fiber_rv_error}
 \end{figure}
 
 \begin{figure}
 \centering
-	\includegraphics[width=\columnwidth]{agitator_model.pdf}
+	\includegraphics[width=\columnwidth]{images/agitator_model.pdf}
 	\caption{Rendering of the proposed fiber agitator for EXPRES. Both the linear and circular agitator have an independent DC motor operated by remote computer control. This agitator will sit on a shelf across the room from the spectograph and will agitate all fibers that enter the spectrograph during both stellar and calibration exposures.}
 \label{fig:agitator_model}
 \end{figure}
