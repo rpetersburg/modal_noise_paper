@@ -140,7 +140,7 @@ These three conditions inevitably pose problems when imaging a spectrum since th
 		\hline		
 		\citet{Roy2014} & Rail agitator & 1-\SI{2}{\hertz} & \SI{170}{\milli\meter} \\
 		\hline
-		\citet{Sablowski2015} & Mechanical ``Excenter''& \SI{2}{\hertz} & \SI{20}{\centi\meter} \\
+		\citet{Sablowski2015} & ``Rotating Excenter''& \SI{2}{\hertz} & \SI{20}{\centi\meter} \\
 		\hline
 	\end{tabular}
 \label{table:previous_studies}
@@ -412,7 +412,25 @@ To calculate the RV error, we first find the centroid within the fiber face for 
 
 The results, shown in Figure \ref{fig:rv_error}, indicate that continuous agitation is essential to control modal noise. The simulated telescope yields RV errors above \SI{20}{\meter\per\second} that do not average out well with longer exposures. Using our idealized method of coupled agitation reduces errors from slow agitation by about 5-8 times and are so far minimized to about \SI{60}{\centi\meter\per\second} when using \SI{30}{\second} exposures. The minimum RV error we could measure in this test, by using the LED source, was \SI{26}{\centi\meter\per\second}. Therefore, our coupled agitation method is less than a factor of 3 from reaching our noise floor.
 
-The calculated \SI{60}{\centi\meter\per\second} error for coupled agitation is the RV error per line in the spectrograph. Thus, the total RV error could be reduced to below \SI{10}{\centi\meter\per\second} with only 36 calibration lines. EXPRES is using a laser frequency comb with approximately \SI{14}{\giga\hertz} line spacing leading to 250-450 lines per spectral order on the spectrograph. This would reduce the RV error caused by modal noise to 2.8-\SI{3.8}{\centi\meter\per\second} per spectral order.
+The calculated \SI{60}{\centi\meter\per\second} error for coupled agitation is the RV error per line in the spectrograph. Thus, the total RV error could be reduced to below \SI{10}{\centi\meter\per\second} with only 36 independent calibration lines. EXPRES is using a laser frequency comb with approximately \SI{14}{\giga\hertz} line spacing leading to 250-450 lines per spectral order on the spectrograph. Conservatively assuming that every tenth lineThis would reduce the RV error caused by modal noise to 2.8-\SI{3.8}{\centi\meter\per\second} per spectral order.
+
+\section{Agitation and Focal Ratio Degradation}
+\label{sec:frd}
+
+There is concern in the RV community that mechanical agitation will exacerbate focal ratio degradation (FRD) within fiber architectures. FRD is defined as when the focal ratio of the output of an optical fiber is less than that of the injected light. In RV spectroscopy, this means that the focal ratio of the telescope may not be preserved when transmitting light to the spectrograph and losses due to FRD-induced vignetting could occur.
+
+FRD can be worsened through mechanical deformation \citet{Ramsey1988}, classified as macrobending (changes to the radius of curvature of bends in the optical fiber) or microbending (deformations smaller than the diameter of the fiber). These bends can couple light into previously unrealized modes thus causing dispersion in the fiber's far field. \citet{Powell1984, Engelsrath1986, Ramsey1988} find that macrobending on its own has little effect on FRD. The fear is rather that violently macrobending the fiber (such as through agitation) may stress the fiber and cause microbending, a more severe detriment to FRD.
+
+Although it has been shown by \citet{Sablowski2015} that their agitator (which has similar frequency and amplitude to our own) has little effect on FRD, we thought it wise to similarly test FRD using our agitator. We use the \SI{100x300}{\micro\meter} rectangular fiber and coupled agitation at approximately \SI{0.5}{\hertz} for this test. Using the FCS, we image the far field at various injected focal ratios (f/3.0, f/4.0, f/5.0) selected with an iris on the input pupil. We then determine the output focal ratio by calculating the Gaussian beam diameter of the far field image (where the edges are set at 1/${e^2}$ of the maximum amplitude) and compare this value to images taken with the output pupil iris set to known diameters.
+
+\begin{figure}
+\centering
+	\includegraphics[width=\columnwidth]{images/frd_input_output.pdf}
+	\caption{Relationship of the input and output focal ratios for the 100x\SI{300}{\micro\meter} rectangular fiber both with and without agitation.}
+\label{fig:frd}
+\end{figure}
+
+The results for this test are shown in Figure \ref{fig:frd}. Across all three injected focal ratios, the output focal ratio is decreased by less than 0.1 when the fiber is agitated. Thus, there is apparently minimal effect to FRD caused by agitating the fiber with coupled agitation, our most stressful scheme. This does not account for long-term wear-and-tear effects of high amplitude agitation on FRD, a topic that requires further study, but does show that our coupled agitation method is gentle enough to not cause any immediate devastating issues.
 
 \section{Summary and Application}
 \label{sec:conclusions}
